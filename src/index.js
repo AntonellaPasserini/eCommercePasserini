@@ -1,17 +1,9 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
-
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+//1)Necesitamos a React
+import React from 'react';// forma tradicional
+//const React = require("react");// forma moderna
+//2)Necesitamos a ReactDOM
+import ReactDom from 'react-dom';
+import Header from './components/Header';
+//4)Necesitamos mostrar el elemento
+ReactDom.render(<Header/>,document.getElementById('root'))
+//JSX: Es como una extension de javascript que sirve de procesador y transforma el codigo a javascript
