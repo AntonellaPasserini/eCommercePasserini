@@ -2,7 +2,8 @@ import NavBar from "./NavBar";
 
 const Header =()=>{
     return<header>
-        <h1>Ecommerce</h1>
+        <h1>THE KAWAII STORE</h1>
+        <h4>かわいい　の　ストル</h4>
         <NavBar/>
     </header>
 

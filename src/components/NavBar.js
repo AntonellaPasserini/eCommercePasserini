@@ -1,9 +1,10 @@
 const NavBar =()=>{
     return<nav>
-        <a href="#"> link </a>
-        <a href="#"> link </a>
-        <a href="#"> link </a>
-        <a href="#"> link </a>
+        <a href="#"> Home </a>
+        <a href="#"> Deals </a>
+        <a href="#"> Accesories </a>
+        <a href="#"> Clothes </a>
+        <a href="#"> Books & Mangas </a>
     </nav>
 
 }
