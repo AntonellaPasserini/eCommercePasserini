@@ -1,6 +1,6 @@
 const Footer =()=>{
     return <footer>
-        © Antonella Passerinicom
+        <p>© Antonella Passerini</p>
     </footer>
 }
 

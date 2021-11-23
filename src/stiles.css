@@ -17,7 +17,7 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0.8rem 1rem;
+    padding: 0.8rem 1rem 1rem;
     background-color:rgb(255, 190, 212) ;
     box-shadow: 0rem 2px 1rem;
 }
@@ -36,13 +36,78 @@ header>h4{
     font-family: Arial, Helvetica, sans-serif;
 }
 
+nav{
+    position:absolute; 
+    right: 1rem;
+    top:1rem;
+}
+
 nav>a{
     text-decoration: none;
-    padding: 1.5rem 1rem;
+    padding: 2.1rem 1rem 0.75rem 1rem;
     font-family: Arial, Helvetica, sans-serif;
+    text-shadow: 0.5px 0 3px #000, 0 -0.5px 2px #000, 0 0.5px 2px #000, -0.5px 0 2px #000;
     color: seashell;
 }
 
 nav>a:hover {
-    background-color: rgb(247, 108, 154);
+    background-color: rgba(252, 88, 143, 0.693);
+    color:#FFFFC2;
+}
+
+.App-cart{
+    width: 2.1rem;
+    height: auto;
+    padding: 0.2rem;
+    margin-left: 0.5rem;
+    border-radius: 50px;
+}
+
+.App-cart:hover{
+    
+    background-color:seashell;
+    cursor: pointer;
+}
+
+footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem; 
+    color:seashell;
+    text-shadow: 1px 0 3px #000, 0 -1px 2px #000, 0 1px 2px #000, -1px 0 2px #000;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color:rgb(255, 190, 212) ;
+    text-align: center;
+    padding: 0.8rem;
+}
+
+.ItemListContainer{
+    padding:1rem 1rem 1rem 1rem;
+    position: relative;
+    color:seashell;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color:#F5A9CB ;
+    height: 75%;
+    width: 90%; 
+    top:5rem;
+    left: 5rem;
+}
+
+.ItemListContainer>h1{
+    top:0px;
+    position: absolute;
+    padding: 3rem 3rem 3rem 3rem;
+    font-size: 3rem;
+    animation-name: welcome;
+    animation-duration: 7s;
+    animation-delay: 1s;
+    text-shadow: 1px 0 3px #000, 0 -1px 2px #000, 0 1px 2px #000, -1px 0 2px #000;
+    
+}
+
+@keyframes welcome {
+    0%   {text-shadow:none;color:#F5A9CB; top:400px;}
+    100% {text-shadow: 1px 0 3px #000, 0 -1px 2px #000, 0 1px 2px #000, -1px 0 2px #000;
+color:seashell; top:0px;}
   }
