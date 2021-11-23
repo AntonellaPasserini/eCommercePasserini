@@ -10,6 +10,7 @@ html, body, #root{
 
 #root{
     background-color: rgb(252, 239, 237);
+    background-image:url('../src/nezuko.jpg');
     display: flex;
     flex-direction: column;
     }
@@ -48,6 +49,7 @@ nav>a{
     font-family: Arial, Helvetica, sans-serif;
     text-shadow: 0.5px 0 3px #000, 0 -0.5px 2px #000, 0 0.5px 2px #000, -0.5px 0 2px #000;
     color: seashell;
+    font-size: 1.3rem;
 }
 
 nav>a:hover {
@@ -87,11 +89,12 @@ footer{
     position: relative;
     color:seashell;
     font-family: Arial, Helvetica, sans-serif;
-    background-color:#F5A9CB ;
+    background-color:#FF8A94 ;
     height: 75%;
     width: 90%; 
     top:5rem;
     left: 5rem;
+    border-radius: 1rem;
 }
 
 .ItemListContainer>h1{
@@ -107,7 +110,7 @@ footer{
 }
 
 @keyframes welcome {
-    0%   {text-shadow:none;color:#F5A9CB; top:400px;}
+    0%   {text-shadow:none;color:#FF8A94; top:400px;}
     100% {text-shadow: 1px 0 3px #000, 0 -1px 2px #000, 0 1px 2px #000, -1px 0 2px #000;
 color:seashell; top:0px;}
   }
