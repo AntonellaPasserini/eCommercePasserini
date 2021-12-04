@@ -144,6 +144,16 @@ footer{
     justify-content: center;
     background-color: seashell ;
 }
+.AddToCat>button{
+    margin-top: 1rem;
+    padding: 1vh 0vh;
+    width: 14rem;
+    color: rgb(177, 158, 158);
+    outline: none;
+    border-style: none;
+    background-color: seashell ;
+    font-size: 20px;
+ }
 
 
 @keyframes welcome {
