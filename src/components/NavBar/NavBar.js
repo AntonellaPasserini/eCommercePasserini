@@ -1,4 +1,4 @@
-import CartWidget from "./CartWidget";
+import CartWidget from "../CartWidget/CartWidget";
 const NavBar =()=>{
     return<nav>
         <a href="#"> Home </a>

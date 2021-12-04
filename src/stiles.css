@@ -10,7 +10,7 @@ html, body, #root{
 
 #root{
     background-color: rgb(252, 239, 237);
-    background-image:url('../src/nezuko.jpg');
+    background-image:url('../src/img/nezuko.jpg');
     display: flex;
     flex-direction: column;
     }
@@ -99,7 +99,7 @@ footer{
 
 .ItemListContainer>h1{
     top:0px;
-    position: absolute;
+    position: block;
     padding: 3rem 3rem 3rem 3rem;
     font-size: 3rem;
     animation-name: welcome;
@@ -108,6 +108,43 @@ footer{
     text-shadow: 1px 0 3px #000, 0 -1px 2px #000, 0 1px 2px #000, -1px 0 2px #000;
     
 }
+.ItemCount{
+    display: flex;
+    width: 14rem;
+    justify-content:center;
+    row-gap: 10rem;
+    column-gap: 2rem;
+    align-items: center;
+    background-color: seashell;
+    color: rgb(177, 158, 158);
+    font-size: 20px;
+    align-items: center;
+    border-radius: 1vh;
+    box-shadow: 8px 8px 20p #000, -8px -8px 20px #000;
+}
+
+.ItemCount>button{
+    width: 1rem;
+    color: rgb(177, 158, 158);
+    outline: none;
+    border-style: none;
+    background-color: seashell ;
+    font-size: 2rem;
+}
+.ItemCount>p{
+    display: flex;
+    padding: 1vh 0vh;
+    justify-content: center;
+    background-color: seashell ;
+}
+
+.ItemCount>span{
+    display: flex;
+    padding: 1vh 0vh;
+    justify-content: center;
+    background-color: seashell ;
+}
+
 
 @keyframes welcome {
     0%   {text-shadow:none;color:#FF8A94; top:400px;}
