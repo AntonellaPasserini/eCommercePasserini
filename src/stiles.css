@@ -85,12 +85,13 @@ footer{
 }
 
 .ItemListContainer{
+    
     padding:1rem 1rem 1rem 1rem;
     position: relative;
     color:seashell;
     font-family: Arial, Helvetica, sans-serif;
     background-color:#FF8A94 ;
-    height: 75%;
+    height: 77%;
     width: 90%; 
     top:5rem;
     left: 5rem;
@@ -129,30 +130,30 @@ footer{
     outline: none;
     border-style: none;
     background-color: seashell ;
-    font-size: 2rem;
+    font-size: 15px;
 }
 .ItemCount>p{
     display: flex;
-    padding: 1vh 0vh;
+    padding: 0.5vh 0vh;
     justify-content: center;
     background-color: seashell ;
 }
 
 .ItemCount>span{
     display: flex;
-    padding: 1vh 0vh;
+    padding: 0.5vh 0vh;
     justify-content: center;
     background-color: seashell ;
 }
 .AddToCat>button{
-    margin-top: 1rem;
-    padding: 1vh 0vh;
+    margin-top: 0.5rem;
+    padding: 0.5vh 0vh;
     width: 14rem;
     color: rgb(177, 158, 158);
     outline: none;
     border-style: none;
     background-color: seashell ;
-    font-size: 20px;
+    font-size: 15px;
  }
 
 
@@ -160,4 +161,42 @@ footer{
     0%   {text-shadow:none;color:#FF8A94; top:400px;}
     100% {text-shadow: 1px 0 3px #000, 0 -1px 2px #000, 0 1px 2px #000, -1px 0 2px #000;
 color:seashell; top:0px;}
+  }
+  .ListGroup{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 4rem;
+}
+.ItemCard{
+    background-color:rgb(255, 190, 212) ;
+    padding: 1rem;
+    border-radius: 1rem;
+  }
+  .ItemImg{
+      height: 20rem;
+      max-width: 30rem;
+      border-radius: 1rem;
+  }
+
+  .ItemHeader{
+    text-shadow: 1px 0 3px #000, 0 -1px 2px #000, 0 1px 2px #000, -1px 0 2px #000;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .ItemCard>p{
+      font-size: 16pt;
+      text-shadow: 1px 0 3px #000, 0 -1px 2px #000, 0 1px 2px #000, -1px 0 2px #000;
+      font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .MoreInfoBtn{
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    padding: 0.5vh 0vh;
+    width: 14rem;
+    color: rgb(177, 158, 158);
+    outline: none;
+    border-style: none;
+    background-color: seashell ;
+    font-size: 15px;
   }
