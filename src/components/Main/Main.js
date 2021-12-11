@@ -1,10 +1,13 @@
 import ItemListContainer from '../ItemListContainer/ItemListContainer';
-
+import ItemDetailContainer from '../ItemDetailContainer/ItemDetailContainer';
 const Main = (props) =>{
-    return(      
+    return(   <>   
            <ItemListContainer>
              {props.children}
-            </ItemListContainer>)    
+            </ItemListContainer>
+            <ItemDetailContainer/>
+            </>
+            )    
        
     
          
