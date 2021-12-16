@@ -1,4 +1,5 @@
 import ItemCount from "../ItemCount/ItemCount";
+import { NavLink } from "react-router-dom";
 
 const Item=({product})=>{
     
@@ -13,7 +14,7 @@ const Item=({product})=>{
             <img src={product.pictureUrl} alt={product.title} className="ItemImg"></img>
             <p className="ItemCategory">Category: {product.category}</p>
             <p className="ItemPrice">Price: {product.price}</p>
-            <button className="MoreInfoBtn"> See More Details</button>
+            <NavLink to={`/item/${product.id}`} pat className="MoreInfoBtn"> See More Details</NavLink>
             <ItemCount stockAmount={product.stockAmount} init={0} onAdd={addToCart}/>
         </div>
     );

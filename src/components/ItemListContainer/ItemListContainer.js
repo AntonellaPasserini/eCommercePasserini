@@ -1,6 +1,5 @@
 import ItemList from '../ItemList/Itemlist';
-import { useState,useEffect } from 'react'
-
+import { useState,useEffect } from 'react';
 
 
 const ItemListContainer = (props) =>{
@@ -10,6 +9,8 @@ const ItemListContainer = (props) =>{
         {id:2, title:'Cat Silicone LED Night Lamp',price:'$35',category:'Lighting',stockAmount:15, pictureUrl:'https://m.media-amazon.com/images/I/61G26-S3MTL._AC_SL1500_.jpg'},
         {id:3, title:'Desk Organizer',price:'$40',category:'Home & Decor',stockAmount:6, pictureUrl:'https://m.media-amazon.com/images/I/71WjZS4u+YL._AC_SL1150_.jpg'}
     ])
+    
+
 
     useEffect(()=>{
 
