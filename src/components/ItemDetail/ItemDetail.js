@@ -5,14 +5,13 @@ const ItemDetail=({item})=>{
 
     const [itemsAdded, setItemsAdded]= useState(false)
 
-    const AddToCart =(quantityToAdd)=>{
+    const AddToCart= quantityToAdd =>()=>{
         console.log("Items Added to the cart",quantityToAdd)
-        useEffect(() => { if(quantityToAdd>0)
+      if(quantityToAdd>0)
             {
             setItemsAdded(true)
             }
-        }, [quantityToAdd])
-    } 
+        }
        
         
 
