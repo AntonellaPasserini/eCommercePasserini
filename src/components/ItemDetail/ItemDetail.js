@@ -1,16 +1,23 @@
 import ItemCount from "../ItemCount/ItemCount";
-import { useEffect } from "react";
+import { useState,useEffect } from "react";
 
 const ItemDetail=({item})=>{
-    
+
+    const [itemsAdded, setItemsAdded]= useState(false)
+
     const AddToCart =(quantityToAdd)=>{
         console.log("Items Added to the cart",quantityToAdd)
-        var num=quantityToAdd
-        return num
-    }
+        useEffect(() => { if(quantityToAdd>0)
+            {
+            setItemsAdded(true)
+            }
+        }, [quantityToAdd])
+    } 
+       
+        
 
 
-    if(num<=0){
+    if(itemsAdded){
         return(
             <article className="ItemDetailCard">
                  <div>

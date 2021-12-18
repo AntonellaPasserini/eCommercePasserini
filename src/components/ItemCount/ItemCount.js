@@ -3,15 +3,14 @@ import { useState } from 'react';
 const ItemCount = ({stockAmount, init, onAdd}) =>{
     const[contador,setContador]=useState(init)
 
-    const addAmountItem = () =>{
-        setContador(contador<stockAmount? contador+1 : contador)
+    const addAmountItem = (e) =>{
+        e.preventDefault();
+        setContador(contador<stockAmount? contador+1 : contador);
     }
     
-    const decreaseAmountItem = () =>{
-        setContador(contador!=0 ? contador-1:0)
-    }
-    const handleClick = (amount)=>{
-        onAdd(amount)
+    const decreaseAmountItem = (e) =>{
+        e.preventDefault();
+        setContador(contador!==0 ? contador-1:0);
     }
     return (
         <>
@@ -21,7 +20,7 @@ const ItemCount = ({stockAmount, init, onAdd}) =>{
             <button onClick={addAmountItem}>+</button>
         </div>
         <div className="AddToCat">
-            <button onClick={handleClick(contador)}>Add to Cart</button>
+            <button onClick={onAdd(contador)}>Add to Cart</button>
         </div>
         </>
     )
