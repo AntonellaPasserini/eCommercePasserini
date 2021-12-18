@@ -10,6 +10,9 @@ const ItemCount = ({stockAmount, init, onAdd}) =>{
     const decreaseAmountItem = () =>{
         setContador(contador!=0 ? contador-1:0)
     }
+    const handleClick = (amount)=>{
+        onAdd(amount)
+    }
     return (
         <>
         <div className="ItemCount">
@@ -18,7 +21,7 @@ const ItemCount = ({stockAmount, init, onAdd}) =>{
             <button onClick={addAmountItem}>+</button>
         </div>
         <div className="AddToCat">
-            <button onClick={onAdd}>Add to Cart</button>
+            <button onClick={handleClick(contador)}>Add to Cart</button>
         </div>
         </>
     )
