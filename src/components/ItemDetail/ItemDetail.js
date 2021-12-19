@@ -1,14 +1,18 @@
 import ItemCount from "../ItemCount/ItemCount";
-import { useState,useEffect } from "react";
-
+import { useState } from "react";
+import {useNavigate } from 'react-router-dom';
 const ItemDetail=({item})=>{
 
     const [itemsAdded, setItemsAdded]= useState(false)
 
-    const AddToCart= quantityToAdd =>()=>{
+    const history = useNavigate ();
+
+    const AddToCart= quantityToAdd =>(e)=>{
+        e.preventDefault();
         console.log("Items Added to the cart",quantityToAdd)
       if(quantityToAdd>0)
             {
+            history('/cart')
             setItemsAdded(true)
             }
         }
