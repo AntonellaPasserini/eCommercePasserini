@@ -14,6 +14,7 @@ const ItemDetail=({item})=>{
             {
             history('/cart')
             setItemsAdded(true)
+            //addItem(item,quantityToAdd)
             }
         }
        
