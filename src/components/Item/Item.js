@@ -1,10 +1,16 @@
 import ItemCount from "../ItemCount/ItemCount";
 import { NavLink } from "react-router-dom";
+import { useContext } from 'react';
+import { context } from '../CartContext/CartContext';
 
 const Item=({product})=>{
+
+    const { cart, addItem}= useContext(context);
     
-    const addToCart =()=>{
-        console.log("Items Added to the cart")
+    const addToCart =(tem, amountAdded)=>{
+        console.log("Items Added to the cart",cart);
+        addItem(tem, amountAdded);
+       
     }
 
     
