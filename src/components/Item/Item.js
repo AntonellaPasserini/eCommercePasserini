@@ -12,8 +12,6 @@ const Item=({product})=>{
         addItem(tem, amountAdded);
        
     }
-
-    
     return(
        <div className="ItemCard">
             <h2 className="ItemHeader">{product.title}</h2>

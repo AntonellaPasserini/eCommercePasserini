@@ -1,7 +1,8 @@
 import ItemDetail from '../ItemDetail/ItemDetail';
 import { useState,useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import { getFirestore, serverTimestamp } from 'firebase/firestore';
+import { collection, getDoc,doc } from 'firebase/firestore';
+import {db} from "../../firebase/index";
 
 const ItemDetailContainer = () =>{
         const  { id }  = useParams()
@@ -12,27 +13,23 @@ const ItemDetailContainer = () =>{
         {Id:3, title:'Desk Organizer',price:'$40',description:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',category:'Home & Decor',stockAmount:6, pictureUrl:'https://m.media-amazon.com/images/I/71WjZS4u+YL._AC_SL1150_.jpg',location:'USA'}
     ])
      */
-
+    const [item, setItem]=useState([])
 
     useEffect(()=>{
-
-        const db = getFirestore();
-
-        const itemCollection = db.collection("items");
-        const item = itemCollection.doc(itemId);
+        const itemCollection = collection(db,"items");
         
-        item.get().then((doc) => {
-            if(!doc.exist){
-                console.log("item does not exist");
-            }
-            setItem({id:doc.id,...doc.data()});
-        }).catch((err) => {
-            console(err);
-        }).finally(() => {
-            setLoading(false);
+        const docReference = doc(itemCollection,id)
+        const itemPromise = getDoc(docReference);
+        itemPromise.then((res)=>{
+
+        setItem({...res.data()})
+            
+        }).catch((err)=>{
+            console.log(err)
         })
 
-    },[])
+
+    },[id])
     return <div className="ItemDetailContainer">
         <ItemDetail  item={item} />
     </div>
